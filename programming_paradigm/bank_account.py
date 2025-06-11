@@ -1,32 +1,34 @@
+# programming_paradigm/bank_account.py
+
 class BankAccount:
+    """
+    A simple BankAccount class to manage a balance.
+    """
     def __init__(self, initial_balance=0):
-        self.account_balance = initial_balance
+        # Initialize the balance. Balance should be private (encapsulation).
+        if not isinstance(initial_balance, (int, float)) or initial_balance < 0:
+            raise ValueError("Initial balance must be a non-negative number.")
+        self.__balance = initial_balance
 
     def deposit(self, amount):
-        """Add money to the account balance"""
-        if amount > 0:
-            self.account_balance += amount
-        else:
-            print("Deposit amount must be positive")
+        # Implement deposit logic.
+        # Ensure amount is positive.
+        if not isinstance(amount, (int, float)) or amount <= 0:
+            return "Deposit amount must be a positive number."
+        self.__balance += amount
+        return f"Deposited: ${amount}"
 
     def withdraw(self, amount):
-        """Remove money if sufficient funds exist"""
-        if amount > self.account_balance:
-            return False
-        elif amount <= 0:
-            print("Withdrawal amount must be positive")
-            return False
-        else:
-            self.account_balance -= amount
-            return True
+        # Implement withdraw logic.
+        # Ensure amount is positive.
+        # Check for sufficient funds.
+        if not isinstance(amount, (int, float)) or amount <= 0:
+            return "Withdrawal amount must be a positive number."
+        if amount > self.__balance:
+            return "Insufficient funds."
+        self.__balance -= amount
+        return f"Withdrew: ${amount}"
 
-    def display_balance(self):
-        """Show current account balance"""
-        print(f"Current Balance: ${self.account_balance:.2f}")
-
-# Example usage:
-account = BankAccount(100)
-account.deposit(50)
-account.withdraw(20)
-account.display_balance()
-
+    def get_balance(self):
+        # Return the current balance.
+        return self.__balance
