@@ -21,5 +21,4 @@ class BankAccount:
     def display_balance(self):
         # This line will only print "Current Balance: $XX.XX".
         print(f"Current Balance: ${self.balance:.2f}")
-
         
