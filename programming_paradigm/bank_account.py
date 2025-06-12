@@ -12,9 +12,9 @@ class BankAccount:
     def withdraw(self, amount):
         if self.balance >= amount:
             self.balance -= amount
-            print(f"Withdrew: ${amount:.1f}")
+            print(f"Withdrew: ${amount:.1f}") # This is the successful path
         else:
-            print(f"Insufficient funds. Current Balance: ${self.balance:.2f}")
+            print("Insufficient funds.") # This is the insufficient funds path
 
     def display_balance(self):
         print(f"Current Balance: ${self.balance:.2f}")
