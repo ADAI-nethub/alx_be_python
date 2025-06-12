@@ -1,7 +1,7 @@
 # programming_paradigm/bank_account.py
 
 class BankAccount:
-    def __init__(self, initial_balance):
+    def __init__(self, initial_balance=0):
         self.balance = initial_balance
 
     def deposit(self, amount):
@@ -21,4 +21,3 @@ class BankAccount:
     def display_balance(self):
         # This line will only print "Current Balance: $XX.XX".
         print(f"Current Balance: ${self.balance:.2f}")
-        
