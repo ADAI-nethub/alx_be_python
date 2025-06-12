@@ -17,4 +17,4 @@ class BankAccount:
             print("Insufficient funds.") # This is the insufficient funds path
 
     def display_balance(self):
-        print(f"Current Balance: ${self.balance:.2f}")
+        print(f"Current Balance: ${self.balance:.1f}")
