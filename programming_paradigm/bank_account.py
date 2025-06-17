@@ -20,4 +20,4 @@ class BankAccount:
 
     def display_balance(self):
         # This method will still print directly, but use the correct attribute and formatting
-        print(f"Current Balance: ${self.balance:.1f}") # Use 'balance' and :.1f for consistency
+        print(f"Current Balance: ${self.balance:.2f}") # Use 'balance' and :.2f for consistency
