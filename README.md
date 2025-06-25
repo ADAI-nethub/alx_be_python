@@ -6,6 +6,8 @@
 - 😄 Pronouns: he/his
 - ⚡ Fun fact: My Nigerian hat, worn in Chiang mai, wasn't just symbolic; it was a talisman of cultural continuity and creative autonomy. #sacatete #technologies
 
+
+
 <!---
 ADAI-nethub/ADAI-nethub is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
